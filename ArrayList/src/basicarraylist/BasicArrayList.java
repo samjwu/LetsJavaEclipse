@@ -10,7 +10,7 @@ public class BasicArrayList {
         grades.add(70);
         
         for (int i = 0; i < grades.size(); i++) {
-        	System.out.printf("Grade: %d\n", grades.get(i));
+        	System.out.printf("Grade %d: %d\n", i+1, grades.get(i));
         }
     }
 }
