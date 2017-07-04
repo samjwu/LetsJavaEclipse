@@ -27,8 +27,11 @@ public class Student {
     }
     
     @Override
-    //print student name and gpa as string
     public String toString() {
         return String.format("%s\t%f", this.Name, this.GPA);
+    }
+    
+    public void println() {
+        System.out.printf("%s\t%f\n",this.Name, this.GPA);
     }
 }
