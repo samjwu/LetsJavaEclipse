@@ -41,8 +41,15 @@ public class Swap {
     public static void printStudents(ArrayList<Student> all) {
         System.out.printf("Student\tGPA\n");
         System.out.printf("-------\t-------\n");
+        
+        //for loop using index
         for(int i = 0; i < all.size(); i++) {
             System.out.printf("%s\n",all.get(i));
+        }
+        
+        //for loop using enumeration
+        for(Student s : all) {
+        	//s.println();
         }
         System.out.println();
     }
