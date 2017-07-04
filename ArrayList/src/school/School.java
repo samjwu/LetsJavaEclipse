@@ -20,7 +20,7 @@ public class School {
         for(Student s : compsci) {
             System.out.printf("%s\n", s);
         }
-        System.out.println();
+        System.out.println("");
         
         //Access with an index, similar to an array
         System.out.println("Example using Index");
