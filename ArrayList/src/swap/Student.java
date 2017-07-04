@@ -32,6 +32,6 @@ public class Student {
     }
     
     public void println() {
-        System.out.printf("%s\t%f\n",this.Name, this.GPA);
+    	System.out.printf("%s\t%f\n",this.Name, this.GPA);
     }
 }

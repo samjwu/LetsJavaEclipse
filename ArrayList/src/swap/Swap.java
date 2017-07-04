@@ -44,12 +44,12 @@ public class Swap {
         
         //for loop using index
         for(int i = 0; i < all.size(); i++) {
-            System.out.printf("%s\n",all.get(i));
+            //System.out.printf("%s\n",all.get(i));
         }
         
         //for loop using enumeration
         for(Student s : all) {
-        	//s.println();
+        	System.out.printf("%s\n", s);
         }
         System.out.println();
     }
