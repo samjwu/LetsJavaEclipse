@@ -1,7 +1,5 @@
 package comparator;
 
-import java.io.PrintStream;
-
 public class Student {
     private String Name;
     private double GPA;
@@ -15,7 +13,7 @@ public class Student {
         return this.Name;
     }
     
-    public String getName(String newName) {
+    public String setName(String newName) {
         return (this.Name = newName);
     }
     

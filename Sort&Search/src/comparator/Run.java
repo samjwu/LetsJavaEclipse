@@ -9,9 +9,9 @@ public class Run {
         ArrayList<Student> compsci = new ArrayList<Student>();
         
         // Adding some students
-        compsci.add(new Student("Bill",4.0));
-        compsci.add(new Student("Adam",3.6));
-        compsci.add(new Student("Carrie",3.15));
+        compsci.add(new Student("Bill", 4.0));
+        compsci.add(new Student("Adam", 3.6));
+        compsci.add(new Student("Carrie", 3.15));
         
         System.out.println("UNSORTED");
         printStudents(compsci);
@@ -29,7 +29,7 @@ public class Run {
     public static void printStudents(ArrayList<Student> students) {
         System.out.printf("Name\tGPA\n");
         for( Student s : students) {
-            System.out.printf("%s\n",s);
+            System.out.printf("%s\n", s);
         }
         System.out.println();
     }
