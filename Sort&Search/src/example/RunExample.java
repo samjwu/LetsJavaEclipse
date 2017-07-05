@@ -71,15 +71,18 @@ public class RunExample {
     
     /**
      * This code implements a bubble sort algorithm
+     * This bubble sort starts comparing from the end
+     * and stops comparing the leftmost element after each iteration
      * @param a: ArrayList to sort
      * @return Sorted ArrayList a
      */
     public static ArrayList<Integer> sort(ArrayList<Integer> a) {
         boolean swapped = false;
-        int tmp =0;
+        int tmp = 0;
         for(int i = 0; i < a.size(); i++) {
             swapped = false;
             for(int j = a.size() - 1; j > i; j--) {
+            	//swap if ele 2 is bigger than ele 1
                 if (a.get(j) < a.get(j-1)) {
                     tmp = a.get(j);
                     a.set(j, a.get(j-1));
