@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 //This will throw an InputMismatchException if a non-integer is entered
 public class Basic {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 	       boolean gotinput = false;
 
