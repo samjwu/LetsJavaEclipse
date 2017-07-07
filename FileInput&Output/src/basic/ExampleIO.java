@@ -16,7 +16,7 @@ public class ExampleIO {
             PrintWriter output = new PrintWriter(file);
             output.println("Testing test.txt");
             output.println("1, 2, 3");
-            output.close();
+            output.close(); //close handle of file for use by other programs
         }
 		//catch errors
 		catch (IOException ex) {
@@ -25,9 +25,9 @@ public class ExampleIO {
         
 		//read from test.txt file
         try {
-            Scanner input = new Scanner( file );
-            String message1  = input.nextLine();
-            String message2  = input.nextLine();
+            Scanner input = new Scanner(file);
+            String message1 = input.nextLine();
+            String message2 = input.nextLine();
             System.out.println(message1);
             System.out.println(message2);
         //catch errors
