@@ -22,8 +22,10 @@ public class SerializeObject {
         students.add(new Student("Bob", 4.0));
         students.add(new Student("Cam", 3.0));
         
+        //serialize collection (ArrayList) students into file students.txt
+        //note students.txt is a binary file (machine readable bytes, not human readable text)
         FileOutputStream fo = new FileOutputStream(file); //write bytes to text file
-        ObjectOutputStream output = new ObjectOutputStream(fo); //serialize object into data for writing to text file (disk)
+        ObjectOutputStream output = new ObjectOutputStream(fo); //serialize object into binary data for writing to text file (disk)
         for (Student s : students) {
             output.writeObject(s);
         }
@@ -31,20 +33,16 @@ public class SerializeObject {
         output.close();
         fo.close();
         
-        FileInputStream is = new FileInputStream(file); //read bytes from text file
-        ObjectInputStream input = new ObjectInputStream(is); //deserialize data to object for reading
-
+        //deserialize file students.txt into the collection (ArrayList) students
+        FileInputStream fi = new FileInputStream(file); //read bytes from text file
+        ObjectInputStream input = new ObjectInputStream(fi); //deserialize binary data to object for reading
         try {
             while(true) {
                     Student s = (Student) input.readObject(); //typecast object into Student
                     System.out.println(s);
             }
         } catch (EOFException ex) {
-            
-        }
-        
-        
-        
-                
+        	System.out.println("End of File");
+        }    
     }
 }
