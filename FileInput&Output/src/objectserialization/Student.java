@@ -31,11 +31,11 @@ public class Student implements Serializable {
     }
     
     public double setGPA(double newGPA) {
-        return (this.GPA=newGPA);
+        return (this.GPA = newGPA);
     }
     
     @Override
     public String toString() {
-       return String.format("%s\t%f",this.Name, this.GPA);
+       return String.format("%s\t%f", this.Name, this.GPA);
     }
 }
