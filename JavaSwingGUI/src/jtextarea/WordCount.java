@@ -6,6 +6,13 @@ import java.awt.event.*;
 //https://www.tutorialspoint.com/java/java_inheritance.htm
 //https://stackoverflow.com/questions/4558111/what-does-implements-do-on-a-class
 //https://stackoverflow.com/questions/10839131/implements-vs-extends-when-to-use-whats-the-difference
+
+/**
+ * 
+ * WordCount class: defines/implements methods of ActionListener interface
+ * ActionListener interface: interface implemented by WordCount class
+ *
+ */
 public class WordCount implements ActionListener {
 	JLabel l1,l2;
 	JTextArea area;
