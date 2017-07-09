@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class EnterPassword {
 	public static void main(String[] args) {
-    JFrame f=new JFrame("Password Field");
+    JFrame f = new JFrame("Password Field");
     
     JPasswordField value = new JPasswordField();
     value.setBounds(100, 100, 200, 30); 
@@ -17,5 +17,5 @@ public class EnterPassword {
     f.setSize(400, 300);
     f.setLayout(null);
     f.setVisible(true);
-}
+	}
 }
