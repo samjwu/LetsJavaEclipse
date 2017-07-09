@@ -1,4 +1,4 @@
-package frames;
+package jframe;
 
 import javax.swing.*;
 
