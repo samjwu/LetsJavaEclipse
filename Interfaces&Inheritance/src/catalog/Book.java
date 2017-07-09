@@ -7,21 +7,22 @@ package catalog;
  *
  */
 public class Book extends Product {
-	private String serial;
+	private String author;
     private int pages;
     
-    public Book(String name, double price, String serial, int pages) {
+    public Book(String name, double price, String author, int pages) {
+    	//constructor for parent/super class
         super (name, price); //properties from super class Product
-        this.serial = serial;
+        this.author = author;
         this.pages = pages;
     }
     
-    public String getSerial() {
-        return this.serial;
+    public String getAuthor() {
+        return this.author;
     }
     
-    public String setserial(String serial) {
-        return (this.serial = serial);
+    public String setAuthor(String author) {
+        return (this.author = author);
     }
     
     public int getPages() {
