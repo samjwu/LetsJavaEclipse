@@ -1,7 +1,7 @@
 package exampleinterface;
 
 /**
- * enumerator to establish
+ * Enumerator to establish
  * values (Open, Closed, Unknown)
  * for a custom data type (RegisterStatus)
  */
