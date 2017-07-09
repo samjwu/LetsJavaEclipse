@@ -26,6 +26,7 @@ public class Product {
         return (this.price = price);
     }
     
+    //method that gives the kind of class of the object instance
     public String getType() {
         return "Product";
     }
