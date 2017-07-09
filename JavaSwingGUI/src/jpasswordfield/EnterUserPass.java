@@ -9,10 +9,10 @@ import java.awt.event.*;
 
 public class EnterUserPass {
 	public static void main(String[] args) {
-	    JFrame f = new JFrame("Password Field");
+	    JFrame f = new JFrame("Login Area");
 	    
 	    final JTextField text = new JTextField();
-        text.setBounds(100,20, 100,30);
+        text.setBounds(100, 20, 100, 30);
 	    
 	    final JPasswordField value = new JPasswordField();
 	    value.setBounds(100, 75, 100, 30); 
@@ -23,7 +23,10 @@ public class EnterUserPass {
         l2.setBounds(20, 75, 80, 30);
 	    
         JButton b = new JButton("Login");
-        b.setBounds(100,120, 80,30);
+        b.setBounds(100, 120, 80, 30);
+        
+        final JLabel label = new JLabel();
+        label.setBounds(20, 150, 200, 50);
         
         f.add(text);
 	    f.add(value);
@@ -33,5 +36,14 @@ public class EnterUserPass {
 	    f.setSize(300, 300);
 	    f.setLayout(null);
 	    f.setVisible(true);
-		}
+	    
+	    b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               String data = "Username " + text.getText();
+               data += ", Password: "
+               + new String(value.getPassword());
+               label.setText(data);
+            }
+        });
+	}
 }
