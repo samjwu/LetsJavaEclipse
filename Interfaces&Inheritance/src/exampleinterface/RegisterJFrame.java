@@ -3,9 +3,16 @@ package exampleinterface;
 /**
  * 
  * RegisterJFrame: inherited/sub class
- * 
  * javax.swing.JFrame: base/super class
  *
+ * The RegisterJFrame class inherits properties from the javax.swing.JFrame class
+ * from the Java Swing library
+ * 
+ * ImplementRegister: inherited/sub class
+ * RegisterInterface: base/super class
+ * 
+ * The ImplementRegister class inherits behaviours from RegisterInterface interface
+ * 
  */
 @SuppressWarnings("serial")
 public class RegisterJFrame extends javax.swing.JFrame {
@@ -13,6 +20,7 @@ public class RegisterJFrame extends javax.swing.JFrame {
 	//implementation of register variable is easily changed
 	private RegisterInterface register; //variable of interface data type
 	
+	//change text in Register Status jtextfield (jTextFieldStatus)
 	private void updateStatus() {
         this.jTextFieldStatus.setText(register.getStatus().toString());
     }
@@ -34,7 +42,7 @@ public class RegisterJFrame extends javax.swing.JFrame {
 
         jButtonOpen = new javax.swing.JButton();
         jButtonClose = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel(); //Register Status label
         jTextFieldStatus = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,19 +99,19 @@ public class RegisterJFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    } //</editor-fold>//GEN-END:initComponents
 
+    //open register function
     private void jButtonOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpenActionPerformed
-        // TODO add your handling code here:
     	register.Open();
         updateStatus();
-    }//GEN-LAST:event_jButtonOpenActionPerformed
+    } //GEN-LAST:event_jButtonOpenActionPerformed
 
+    //close register function
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
-        // TODO add your handling code here:
         register.Close();
         updateStatus();
-    }//GEN-LAST:event_jButtonCloseActionPerformed
+    } //GEN-LAST:event_jButtonCloseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,10 +147,11 @@ public class RegisterJFrame extends javax.swing.JFrame {
             }
         });
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonClose;
     private javax.swing.JButton jButtonOpen;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel1; //Register Status label
     private javax.swing.JTextField jTextFieldStatus;
     // End of variables declaration//GEN-END:variables
 }
